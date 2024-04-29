@@ -13,7 +13,7 @@ export const User = () => {
     }
     const fetchUserData = async () => {
       const res = await fetch(
-        "https://crm-backend-34zd.onrender.com/api/products/user/all/",
+        "https://crm-backend-code.onrender.com/api/products/user/all/",
         {
           method: "GET",
           headers: {
@@ -35,7 +35,7 @@ export const User = () => {
 
   async function handleDelete(id) {
     const res = await fetch(
-      `https://crm-backend-34zd.onrender.com/api/products/user/delete/${id}`,
+      `https://crm-backend-code.onrender.com/api/products/user/delete/${id}`,
       {
         method: "DELETE",
         headers: {

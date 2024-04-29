@@ -44,7 +44,7 @@ export const EditProduct = ({ userProduct, setUserProduct }) => {
      };
 
     const res = await fetch(
-      `https://crm-backend-34zd.onrender.com/api/products/user/edit/${id}`,
+      `https://crm-backend-code.onrender.com/api/products/user/edit/${id}`,
       {
         method: "PUT",
         body: JSON.stringify(newProduct),
