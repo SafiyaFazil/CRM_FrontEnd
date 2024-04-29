@@ -21,7 +21,7 @@ export const Register = () => {
       password,
     };
     const res = await fetch(
-      "https://crm-backend-34zd.onrender.com/api/user/register",
+      "https://crm-backend-code.onrender.com/api/user/register",
       {
         method: "POST",
         body: JSON.stringify(payload),
@@ -42,75 +42,72 @@ export const Register = () => {
 
   return (
     <Base title={"Register"}>
-    <div className="main">
+      <div className="main">
+        <div className="register">
+          <form>
+            <TextField
+              id="outlined-basic"
+              label="UserName"
+              variant="outlined"
+              value={userName}
+              type="text"
+              onChange={(e) => setUserName(e.target.value)}
+            />
+            <br />
+            <br />
 
-      
-      
-      <div className="register">
+            <TextField
+              id="outlined-basic"
+              label="City"
+              variant="outlined"
+              value={city}
+              type="text"
+              onChange={(e) => setCity(e.target.value)}
+            />
+            <br />
+            <br />
+            <TextField
+              id="outlined-basic"
+              label="Phone"
+              variant="outlined"
+              value={phone}
+              type="number"
+              onChange={(e) => setPhone(e.target.value)}
+            />
+            <br />
+            <br />
 
-      <TextField
-        id="outlined-basic"
-        label="UserName"
-        variant="outlined"
-        value={userName}
-        type="text"
-        onChange={(e) => setUserName(e.target.value)}
-        />
-      <br />
-      <br />
+            <TextField
+              id="outlined-basic"
+              label="Email"
+              variant="outlined"
+              value={email}
+              type="email"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <br />
+            <br />
 
-      <TextField
-        id="outlined-basic"
-        label="City"
-        variant="outlined"
-        value={city}
-        type="text"
-        onChange={(e) => setCity(e.target.value)}
-      />
-      <br />
-      <br />
-      <TextField
-        id="outlined-basic"
-        label="Phone"
-        variant="outlined"
-        value={phone}
-        type="number"
-        onChange={(e) => setPhone(e.target.value)}
-      />
-      <br />
-      <br />
+            <TextField
+              id="outlined-basic"
+              label="Password"
+              variant="outlined"
+              value={password}
+              type="password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <br />
+            <br />
 
-      <TextField
-        id="outlined-basic"
-        label="Email"
-        variant="outlined"
-        value={email}
-        type="email"
-        onChange={(e) => setEmail(e.target.value)}
-        />
-      <br />
-      <br />
-
-      <TextField
-        id="outlined-basic"
-        label="Password"
-        variant="outlined"
-        value={password}
-        type="password"
-        onChange={(e) => setPassword(e.target.value)}
-        />
-      <br />
-      <br />
-
-      <Button variant="contained" type="submit" onClick={handleRegister}>
-        Register
-      </Button>
-      <br />
-      <br />
+            <Button variant="contained" type="submit" onClick={handleRegister}>
+              Register
+            </Button>
+            <br />
+            <br />
+          </form>
         </div>
-      
-      {err ? <Typography color={"danger"}>{err} </Typography> : ""}
-    </div>
+        {err ? <Typography color={"danger"}>{err} </Typography> : ""}
+      </div>
     </Base>
   );
 };
