@@ -81,7 +81,8 @@ export const Login = () => {
   const [password, setPassword] = useState("");
   const [err, setErr] = useState("");
 
-  const handleLogin = async () => {
+  const handleLogin = async (e) => {
+    e.preventDefault();
     try {
       const payload = {
         email,
@@ -97,6 +98,7 @@ export const Login = () => {
           },
         }
       );
+      console.log(res);
       if (!res.ok) {
         throw new Error("Failed to log in");
       }
