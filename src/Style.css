@@ -116,6 +116,12 @@ height: 100vh;
   
 }
 
+.navItemHome{
+  background-color: rgb(73, 19, 201);
+  border-radius: 50px;
+  
+}
+
 .navHome{
   background-color: bisque;
 }

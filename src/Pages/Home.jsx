@@ -11,18 +11,17 @@ const Home = ({title, children}) => {
 
   return (
     <div className="navHome">
-
       <Nav className="justify-content-center " activeKey="/home">
-        <Nav.Item>
+        <Nav.Item className="navLinkHome">
           <Nav.Link href="/dashboard">Product Details</Nav.Link>
         </Nav.Item>
-        <Nav.Item>
+        <Nav.Item className="navLinkHome">
           <Nav.Link href="/account">My Account</Nav.Link>
         </Nav.Item>
-        <Nav.Item>
+        <Nav.Item className="navLinkHome">
           <Nav.Link href="/cusDetails">Customer Details</Nav.Link>
         </Nav.Item>
-        <Nav.Item>
+        <Nav.Item className="navLinkHome">
           <Nav.Link href="/">Logout</Nav.Link>
         </Nav.Item>
       </Nav>
