@@ -44,7 +44,7 @@ export const Register = () => {
     <Base title={"Register"}>
       <div className="main">
         <div className="register">
-          <form>
+          {/* <form> */}
             <TextField
               // id="outlined-basic"
               label="UserName"
@@ -104,7 +104,7 @@ export const Register = () => {
             </Button>
             <br />
             <br />
-          </form>
+          {/* </form> */}
         </div>
         {err ? <Typography color={"danger"}>{err} </Typography> : ""}
       </div>
