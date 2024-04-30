@@ -120,7 +120,7 @@ export const Login = () => {
       <div className="login_page">
         <form>
           <TextField
-            id="outlined-basic"
+            // id="outlined-basic"
             label="Email"
             variant="outlined"
             value={email}
@@ -131,7 +131,7 @@ export const Login = () => {
           <br />
 
           <TextField
-            id="outlined-basic"
+            // id="outlined-basic"
             label="Password"
             variant="outlined"
             value={password}
