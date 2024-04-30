@@ -25,7 +25,7 @@ export const AddProduct = ({ userProduct, setUserProduct }) => {
     };
 
     const res = await fetch(
-      "https://crm-backend-code.onrender.com/api/products/user/add",
+      "https://crm-backend-code-1.onrender.com/api/products/user/add",
       {
         method: "POST",
         body: JSON.stringify(newProduct),

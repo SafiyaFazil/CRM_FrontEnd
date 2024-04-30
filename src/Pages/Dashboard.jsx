@@ -13,7 +13,7 @@ export const Dashboard = () => {
     const fetchData = async () => {
       console.log(token);
       const res = await fetch(
-        "https://crm-backend-code.onrender.com/api/products/all/",
+        "https://crm-backend-code-1.onrender.com/api/products/all/",
         {
           method: "GET",
           headers: {

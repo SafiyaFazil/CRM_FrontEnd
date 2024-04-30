@@ -13,12 +13,15 @@ export const EditProduct = ({ userProduct, setUserProduct }) => {
       navigate("/login", { replace: true });
     }
     const fetchUserData = async () => {
-      const res = await fetch("http://localhost:4000/api/products/user/all/", {
-        method: "GET",
-        headers: {
-          "x-auth-token": token,
-        },
-      });
+      const res = await fetch(
+        "https://crm-backend-code-1.onrender.com/api/products/user/all/",
+        {
+          method: "GET",
+          headers: {
+            "x-auth-token": token,
+          },
+        }
+      );
       const data = await res.json();
       console.log(data);
 
@@ -44,7 +47,7 @@ export const EditProduct = ({ userProduct, setUserProduct }) => {
      };
 
     const res = await fetch(
-      `https://crm-backend-code.onrender.com/api/products/user/edit/${id}`,
+      `https://crm-backend-code-1.onrender.com/api/products/user/edit/${id}`,
       {
         method: "PUT",
         body: JSON.stringify(newProduct),

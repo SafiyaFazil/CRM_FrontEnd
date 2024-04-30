@@ -21,7 +21,7 @@ export const Register = () => {
       password,
     };
     const res = await fetch(
-      "https://crm-backend-code.onrender.com/api/user/register",
+      "https://crm-backend-code-1.onrender.com/api/user/register",
       {
         method: "POST",
         body: JSON.stringify(payload),

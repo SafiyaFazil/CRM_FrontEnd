@@ -13,7 +13,7 @@ export const User = () => {
     }
     const fetchUserData = async () => {
       const res = await fetch(
-        "https://crm-backend-code.onrender.com/api/products/user/all/",
+        "https://crm-backend-code-1.onrender.com/api/products/user/all/",
         {
           method: "GET",
           headers: {
