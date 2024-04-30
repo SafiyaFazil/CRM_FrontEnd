@@ -46,7 +46,7 @@ export const Register = () => {
         <div className="register">
           <form>
             <TextField
-              id="outlined-basic"
+              // id="outlined-basic"
               label="UserName"
               variant="outlined"
               value={userName}
@@ -57,7 +57,7 @@ export const Register = () => {
             <br />
 
             <TextField
-              id="outlined-basic"
+              // id="outlined-basic"
               label="City"
               variant="outlined"
               value={city}
@@ -67,7 +67,7 @@ export const Register = () => {
             <br />
             <br />
             <TextField
-              id="outlined-basic"
+              // id="outlined-basic"
               label="Phone"
               variant="outlined"
               value={phone}
@@ -78,7 +78,7 @@ export const Register = () => {
             <br />
 
             <TextField
-              id="outlined-basic"
+              // id="outlined-basic"
               label="Email"
               variant="outlined"
               value={email}
@@ -89,7 +89,7 @@ export const Register = () => {
             <br />
 
             <TextField
-              id="outlined-basic"
+              // id="outlined-basic"
               label="Password"
               variant="outlined"
               value={password}
