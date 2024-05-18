@@ -16,19 +16,19 @@ const Base = ({ title, children }) => {
     <div className="home">
       <div>
         <header>
-          
           <Nav className="justify-content-end nav" activeKey="/home">
             <Nav.Item className="navItem">
-              <Nav.Link className="navLink" href="/register">Register</Nav.Link>
+              <Nav.Link href="/adminLogin">Admin Login</Nav.Link>
+            </Nav.Item>
+            <Nav.Item className="navItem">
+              <Nav.Link className="navLink" href="/register">
+                Register
+              </Nav.Link>
             </Nav.Item>
             <Nav.Item className="navItem">
               <Nav.Link href="/login">Login</Nav.Link>
             </Nav.Item>
-            <Nav.Item className="navItem">
-              <Nav.Link href="/">Logout</Nav.Link>
-            </Nav.Item>
           </Nav>
-          
         </header>
       </div>
       <div className="main">

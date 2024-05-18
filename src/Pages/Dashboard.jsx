@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Home from "./Home.jsx";
+import AdminHome from "./AdminHome.jsx";
 
 export const Dashboard = () => {
   const [product, setProduct] = useState([]);
@@ -13,7 +14,7 @@ export const Dashboard = () => {
     const fetchData = async () => {
       console.log(token);
       const res = await fetch(
-        "https://crm-backend-code-1.onrender.com/api/products/all/",
+        "https://crm-backend-code-1.onrender.com/api/admin/all/",
         {
           method: "GET",
           headers: {
@@ -34,7 +35,7 @@ export const Dashboard = () => {
     fetchData();
   }, []);
   return (
-    <Home title={"Dashboard"}>
+    <AdminHome title={"Dashboard"}>
       {product && (
         <div className="productDetails">
           {product?.map((data) => {
@@ -60,6 +61,6 @@ export const Dashboard = () => {
           })}
         </div>
       )}
-    </Home>
+    </AdminHome>
   );
 };

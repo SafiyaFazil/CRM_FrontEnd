@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Home from "./Home.jsx";
+import AdminHome from "./AdminHome.jsx";
 
 export const CustomerDetails = () => {
   const [customer, setCustomer] = useState([]);
@@ -34,7 +35,7 @@ export const CustomerDetails = () => {
     fetchData();
   }, []);
   return (
-    <Home title={"CustomerDetails"}>
+    <AdminHome title={"CustomerDetails"}>
       {customer && (
         <div className="productDetails">
           {customer?.map((data) => {
@@ -50,13 +51,12 @@ export const CustomerDetails = () => {
                   <br />
                   <b>Email :</b> {data.email}
                   <br />
-                  
                 </div>
               </>
             );
           })}
         </div>
       )}
-    </Home>
+    </AdminHome>
   );
 };

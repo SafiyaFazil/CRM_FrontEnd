@@ -11,6 +11,8 @@ import WelcomePage from "./Pages/WelcomePage.jsx";
 import SearchProduct from "./Pages/SearchProduct.jsx";
 import Base from "./Base/Base.jsx";
 import { CustomerDetails } from "./Pages/CustomerDetails.jsx";
+import { AdminLogin } from "./Pages/AdminLogin.jsx";
+import AdminHome from "./Pages/AdminHome.jsx";
 
 const App = () => {
   const [userProduct, setUserProduct] = useState([]);
@@ -19,9 +21,11 @@ const App = () => {
       <Routes>
         <Route exact path="/" element={<WelcomePage />} />
         <Route path="/base" element={<Base />} />
+        <Route path="/adminHome" element={<AdminHome />} />
         <Route exact path="/home" element={<Home />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/adminLogin" element={<AdminLogin />} />
         <Route path="/register" element={<Register />} />
         <Route path="/search" element={<SearchProduct />} />
         <Route path="/cusDetails" element={<CustomerDetails />} />
@@ -32,11 +36,10 @@ const App = () => {
           }
         />
         <Route
-          path="/add/product"
+          path="/add"
           element={
             <AddProduct
-              userProduct={userProduct}
-              setUserProduct={setUserProduct}
+              userProduct={userProduct} setUserProduct={setUserProduct}
             />
           }
         />

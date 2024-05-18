@@ -5,16 +5,18 @@ import "../Style.css";
 import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-
-const Home = ({title, children}) => {
+const AdminHome = ({ title, children }) => {
   const navigate = useNavigate();
 
   return (
     <div className="navHome">
       <Nav className="justify-content-center " activeKey="/home">
+        <Nav.Item className="navLinkHome">
+          <Nav.Link href="/dashboard">Product Details</Nav.Link>
+        </Nav.Item>
         
         <Nav.Item className="navLinkHome">
-          <Nav.Link href="/account">My Account</Nav.Link>
+          <Nav.Link href="/cusDetails">Customer Details</Nav.Link>
         </Nav.Item>
         
         <Nav.Item className="navLinkHome">
@@ -32,4 +34,4 @@ const Home = ({title, children}) => {
   );
 };
 
-export default Home;
+export default AdminHome;

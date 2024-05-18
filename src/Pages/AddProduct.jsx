@@ -16,13 +16,16 @@ export const AddProduct = ({ userProduct, setUserProduct }) => {
   const [productCode, setProductCode] = useState("");
   const [quantity, setQuantity] = useState("");
   const [comments,setComments] = useState("");
-  const handleAddProduct = async () => {
+  const handleAddProduct = async (e) => {
+    e.preventDefault();
+    
     const newProduct = {
       productName,
         productCode,
         quantity,
       comments,
     };
+    console.log("New Product:", newProduct); 
 
     const res = await fetch(
       "https://crm-backend-code-1.onrender.com/api/products/user/add",
@@ -40,14 +43,21 @@ export const AddProduct = ({ userProduct, setUserProduct }) => {
       console.log("error");
     } else {
       setUserProduct([...userProduct, data.data]);
+
+      setProductName("");
+      setProductCode("");
+      setQuantity("");
+      setComments("");
     }
   };
+
+  
   return (
     <Home title={"AddProduct"}>
       <div className="addproduct">
         <form>
           <TextField
-            id="outlined-basic"
+            // id="outlined-basic"
             label="ProductName"
             variant="outlined"
             value={productName}
@@ -57,7 +67,7 @@ export const AddProduct = ({ userProduct, setUserProduct }) => {
           <br />
           <br />
           <TextField
-            id="outlined-basic"
+            // id="outlined-basic"
             label="ProductCode"
             variant="outlined"
             value={productCode}
@@ -67,7 +77,7 @@ export const AddProduct = ({ userProduct, setUserProduct }) => {
           <br />
           <br />
           <TextField
-            id="outlined-basic"
+            // id="outlined-basic"
             label="Quantity"
             variant="outlined"
             value={quantity}
@@ -77,7 +87,7 @@ export const AddProduct = ({ userProduct, setUserProduct }) => {
           <br />
           <br />
           <TextField
-            id="outlined-basic"
+            // id="outlined-basic"
             label="Comments"
             variant="outlined"
             value={comments}
@@ -95,3 +105,46 @@ export const AddProduct = ({ userProduct, setUserProduct }) => {
     </Home>
   );
 };
+
+
+// const handleAddProduct = async () => {
+  //   // Check if required fields are empty
+  //   if (!productName || !productCode || !quantity) {
+  //     console.log("Please fill all required fields");
+  //     return;
+  //   }
+
+  //   const newProduct = {
+  //     productName,
+  //     productCode,
+  //     quantity,
+  //     comments,
+  //   };
+
+  //   try {
+  //     const res = await fetch(
+  //       "https://crm-backend-code-1.onrender.com/api/products/user/add",
+  //       {
+  //         method: "POST",
+  //         body: JSON.stringify(newProduct),
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //           "x-auth-token": token,
+  //         },
+  //       }
+  //     );
+  //     const data = await res.json();
+  //     if (!data.data) {
+  //       console.error("Failed to add product:", data.error);
+  //     } else {
+  //       setUserProduct([...userProduct, data.data]);
+  //       // Clear input fields after successful addition
+  //       setProductName("");
+  //       setProductCode("");
+  //       setQuantity("");
+  //       setComments("");
+  //     }
+  //   } catch (error) {
+  //     console.error("An error occurred while adding the product:", error);
+  //   }
+  // };

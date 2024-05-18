@@ -106,7 +106,7 @@ export const Login = () => {
       if (data.token) {
         setErr("");
         localStorage.setItem("token", data.token);
-        navigate("/dashboard");
+        navigate("/account");
       } else {
         setErr(data.error);
       }
